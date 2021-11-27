@@ -1,4 +1,4 @@
-![provi_hack](./img/provi_hack.jpg)
+![provi_hack](./provi_hack.jpg)
 
 # ProviHack-Team-2
 
