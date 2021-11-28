@@ -39,12 +39,10 @@ function Login() {
         <Input type="text" placeholder="nome" {...register("name")} />
         {errors.email?.message}
         <ButtonContainer>
-          <Button red type="submit">
+          <Button marginBottom="8px" red type="submit">
             Entrar
           </Button>
-          <Button marginBottom="8px" register>
-            Cadastro
-          </Button>
+          <Button register>Cadastro</Button>
         </ButtonContainer>
       </FormContainer>
     </LoginContainer>
