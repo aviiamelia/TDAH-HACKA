@@ -1,7 +1,7 @@
 import pomodoro from "../../assets/pomodoro.png";
 import {
   Container,
-  Image,
+  ImagePomo,
   ProblemContainer,
   SquareContainer,
   Squares,
@@ -11,9 +11,18 @@ import {
   Picture,
   UserName,
 } from "../../components/SubjectSelect/styles";
+import { Button } from "../Login/styles";
 import { useCharacters } from "../../Providers/Characters";
+import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
 function MathContainer() {
+  const history = useHistory();
   const { user, avatar } = useCharacters();
+  useEffect(() => {
+    if (user === null) {
+      history.push("/");
+    }
+  }, [user, history]);
   return (
     <Container>
       <UserContainer>
@@ -37,7 +46,10 @@ function MathContainer() {
         ))}
         = <Squares>100</Squares>
       </SquareContainer>
-      <Image src={pomodoro} />
+      <ImagePomo src={pomodoro} />
+      <Button onClick={() => history.push("/subjects")} margin="50px">
+        pronto
+      </Button>
     </Container>
   );
 }

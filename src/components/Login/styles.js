@@ -45,10 +45,12 @@ export const Button = styled.button`
   border: none;
   color: white;
   font-weight: 600;
+  margin: 0 auto;
   font-size: 15px;
   background-color: ${(props) => (props.register ? "gray" : "#054092")};
   border-radius: 15px;
   margin-bottom: 15px;
   width: 230px;
   height: 40px;
+  margin-top: ${(props) => props.margin};
 `;

@@ -12,9 +12,9 @@ import {
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-
+import { useEffect } from "react";
 function CharacterSelect() {
-  const { characters, setAvatar, avatar } = useCharacters();
+  const { characters, setAvatar, avatar, user } = useCharacters();
   console.log(avatar);
   const history = useHistory();
   const [counter, setCounter] = useState(0);
@@ -23,7 +23,11 @@ function CharacterSelect() {
     setAvatar(character[counter].image);
     history.push("/subjects");
   };
-
+  useEffect(() => {
+    if (user === null) {
+      history.push("/");
+    }
+  }, [user, history]);
   return (
     <CharacterContainer>
       <Text>Escolha seu Avatar:</Text>

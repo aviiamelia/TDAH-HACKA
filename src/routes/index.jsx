@@ -1,25 +1,23 @@
 import { Switch, Route } from "react-router-dom";
-import Forum from "../components/Forum";
 import Login from "../components/Login";
 import CharacterSelect from "../components/CharacterSelect";
 import SubjectSelector from "../components/SubjectSelect/index";
 import MathContainer from "../components/MathPage/index";
 import PortuContainer from "../components/PortuPage/index";
+import Tangram from "../components/Tangram";
+import TodoContainer from "../components/Todo";
 
 const Routes = () => {
   return (
     <Switch>
       <Route exact path="/">
-        <CharacterSelect />
+        <Login />
       </Route>
       <Route path="/subjects">
         <SubjectSelector />
       </Route>
-      <Route path="/forum">
-        <Forum />
-      </Route>
-      <Route path="/login">
-        <Login />
+      <Route path="/select">
+        <CharacterSelect />
       </Route>
       <Route path="/math">
         <MathContainer />
@@ -27,7 +25,12 @@ const Routes = () => {
       <Route path="/portu">
         <PortuContainer />
       </Route>
-      
+      <Route path="/tangram">
+        <Tangram />
+      </Route>
+      <Route path="/todo">
+        <TodoContainer />
+      </Route>
     </Switch>
   );
 };

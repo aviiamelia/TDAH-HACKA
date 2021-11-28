@@ -5,6 +5,8 @@ export const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background-color: white;
+  align-items: center;
+  justify-content: space-space-evenly;
   position: relative;
 `;
 
@@ -25,16 +27,29 @@ export const ProblemContainer = styled.div`
   margin-top: 100px;
   h3 {
     font-weight: 600;
-    margin-left: 10px;
+    margin-bottom: 25px;
     color: black;
-    width: 400px;
+    text-align: center;
+    width: 100%;
     height: 50px;
   }
+`;
+export const Cont = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+export const Cont2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
 `;
 export const SquareContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
+  justify-content: center;
   max-width: 300px;
   color: black;
   font-size: 25px;
@@ -55,9 +70,8 @@ export const Squares = styled.div`
 
 export const Lines = styled.div`
   border: 1px solid black;
-  
-  
+
   width: 200px;
-  
+
   margin-bottom: 15px;
 `;

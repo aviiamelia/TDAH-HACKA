@@ -8,7 +8,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const Image = styled.img`
+export const ImagePomo = styled.img`
   position: absolute;
   height: 100px;
   width: 100px;
@@ -22,7 +22,7 @@ export const ProblemContainer = styled.div`
     font-weight: 600;
     margin-left: 10px;
     color: black;
-    width: 400px;
+    width: 360px;
     height: 50px;
   }
 `;
@@ -41,6 +41,6 @@ export const Squares = styled.div`
   border: 1px solid black;
   font-size: 15px;
   line-height: 25px;
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
 `;

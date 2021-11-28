@@ -22,7 +22,7 @@ function Login() {
   const handleRegister = (userData) => {
     console.log(userData);
     setUser(userData.name);
-    history.push("/");
+    history.push("/select");
   };
   const {
     register,

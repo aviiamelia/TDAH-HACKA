@@ -25,10 +25,20 @@ export const CharacterProvider = ({ children }) => {
   ]);
   const [user, setUser] = useState(null);
   const [avatar, setAvatar] = useState(null);
+  const [todoList, setTodoList] = useState(["lavar louça"]);
 
   return (
     <CharactersContext.Provider
-      value={{ characters, setCharacter, user, setUser, avatar, setAvatar }}
+      value={{
+        characters,
+        setCharacter,
+        user,
+        setUser,
+        avatar,
+        setAvatar,
+        todoList,
+        setTodoList,
+      }}
     >
       {children}
     </CharactersContext.Provider>
