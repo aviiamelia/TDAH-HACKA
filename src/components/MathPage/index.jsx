@@ -66,7 +66,7 @@ function MathContainer() {
           = <Squares>100</Squares>
         </SquareContainer>
         <ImagePomo onClick={() => setIsOpen(!isOpen)} src={pomodoro} />
-        <Button margin="50px">pronto</Button>
+        <Button margin="30px">pronto</Button>
       </Container>
     </>
   );

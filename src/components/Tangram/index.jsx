@@ -50,7 +50,7 @@ function Tangram() {
           <Image src={puzzle} />
         </TangramContainer>
         <ImagePomo onClick={() => setIsOpen(!isOpen)} src={pomodoro} />
-        <Button margin="25px">pronto</Button>
+        <Button marginBottom="20px">pronto</Button>
       </Container>
     </>
   );
