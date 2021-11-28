@@ -25,7 +25,7 @@ export const CharacterProvider = ({ children }) => {
   ]);
   const [user, setUser] = useState(null);
   const [avatar, setAvatar] = useState(null);
-  const [todoList, setTodoList] = useState(["lavar louça"]);
+  const [todoList, setTodoList] = useState([]);
 
   return (
     <CharactersContext.Provider

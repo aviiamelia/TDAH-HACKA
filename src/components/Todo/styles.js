@@ -55,6 +55,7 @@ export const TodoModal = styled.div`
   height: 180px;
   width: 280px;
   top: 20%;
+  left: 11%;
   border: 2px solid black;
   border-radius: 8px;
   background-image: linear-gradient(yellow, #ff6833 80%);

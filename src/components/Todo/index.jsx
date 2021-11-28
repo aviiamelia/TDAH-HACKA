@@ -1,14 +1,12 @@
 import { UserContainer, Picture, UserName } from "../SubjectSelect/styles";
 import { Container } from "../PortuPage/styles";
 import { useCharacters } from "../../Providers/Characters";
-import { Button } from "../Login/styles";
 import { useHistory } from "react-router-dom";
-import { ImagePomo } from "../MathPage/styles";
-import pomodoro from "../../assets/pomodoro.png";
 import { ToContainer, Cards, AddTodo, TodoModal } from "./styles";
 import { FiPlus } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { useState, useEffect } from "react";
+import { IoMdArrowBack } from "react-icons/io";
 
 function TodoContainer() {
   const history = useHistory();
@@ -26,7 +24,6 @@ function TodoContainer() {
     const newList = todoList.filter((item) => item !== todo);
     setTodoList(newList);
   };
-  console.log(user);
   useEffect(() => {
     if (user === null) {
       history.push("/");
@@ -35,11 +32,13 @@ function TodoContainer() {
 
   return (
     <Container>
+      <span onClick={() => history.push("/subjects")}>
+        <IoMdArrowBack />
+      </span>
       <UserContainer>
         <Picture characterImage={avatar} />
         <UserName>{user}</UserName>
       </UserContainer>
-      <ImagePomo src={pomodoro} />
       <ToContainer>
         {todoList.map((todo, index) => (
           <Cards>
@@ -57,10 +56,6 @@ function TodoContainer() {
           <p>Adicionar tarefa</p>
         </AddTodo>
       </ToContainer>
-
-      <Button onClick={() => history.push("/subjects")} margin="25px">
-        pronto
-      </Button>
       {isOpen && (
         <TodoModal>
           <div>

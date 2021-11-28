@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background-color: white;
-  align-items: center;
+  font-size: 25px;
+  color: black;
   justify-content: space-space-evenly;
   position: relative;
 `;
@@ -74,4 +75,11 @@ export const Lines = styled.div`
   width: 200px;
 
   margin-bottom: 15px;
+`;
+
+export const Span = styled.span`
+  position: absolute;
+  font-size: 25px;
+  top: 1%;
+  right: 1%;
 `;
