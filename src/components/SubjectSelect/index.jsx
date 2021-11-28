@@ -23,7 +23,7 @@ function SubjectSelector() {
     { subject: "Matemática", image: mathBoard, path: "math" },
     { subject: "Português", image: board, path: "portu" },
     { subject: "Raciocínio lógico", image: cube, path: "tangram" },
-    { subject: "lista de tarefas", image: todo, path: "todo" },
+    { subject: "Lista de tarefas", image: todo, path: "todo" },
   ];
   useEffect(() => {
     if (user === null) {
