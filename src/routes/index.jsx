@@ -3,6 +3,7 @@ import Forum from "../components/Forum";
 import Login from "../components/Login";
 import CharacterSelect from "../components/CharacterSelect";
 import SubjectSelector from "../components/SubjectSelect/index";
+import MathContainer from "../components/MathPage/index";
 
 const Routes = () => {
   return (
@@ -18,6 +19,9 @@ const Routes = () => {
       </Route>
       <Route path="/login">
         <Login />
+      </Route>
+      <Route path="/math">
+        <MathContainer />
       </Route>
     </Switch>
   );

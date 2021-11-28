@@ -1,37 +1,53 @@
 import { useCharacters } from "../../Providers/Characters";
 import {
   CharacterContainer,
-  Card,
   Text,
   SecondContainer,
   CardContainer,
-  Button,
+  Image,
+  ArrowRight,
+  ArrowLeft,
+  BioText,
 } from "./styles";
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 function CharacterSelect() {
   const { characters, setAvatar, avatar } = useCharacters();
   console.log(avatar);
   const history = useHistory();
+  const [counter, setCounter] = useState(0);
 
   const handleClick = (character) => {
-    setAvatar(character.image);
+    setAvatar(character[counter].image);
     history.push("/subjects");
   };
 
   return (
     <CharacterContainer>
-      <Text>Selecione seu personagem</Text>
+      <Text>Escolha seu Avatar:</Text>
       <SecondContainer>
         <CardContainer>
-          {characters.map((character) => (
-            <Card
-              onClick={() => handleClick(character)}
-              characterImage={character.image}
-            />
-          ))}
+          <Image
+            onClick={() => handleClick(characters)}
+            src={characters[counter].image}
+          />
+          <BioText>{characters[counter].bio}</BioText>
         </CardContainer>
       </SecondContainer>
+      {counter < 2 ? (
+        <ArrowRight
+          onClick={counter < 2 ? () => setCounter(counter + 1) : null}
+        >
+          <AiOutlineArrowRight />
+        </ArrowRight>
+      ) : null}
+      {counter > 0 ? (
+        <ArrowLeft onClick={counter > 0 ? () => setCounter(counter - 1) : null}>
+          <AiOutlineArrowLeft />
+        </ArrowLeft>
+      ) : null}
     </CharacterContainer>
   );
 }

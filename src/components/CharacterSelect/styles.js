@@ -6,8 +6,9 @@ export const CharacterContainer = styled.div`
   padding-top: 50px;
   min-height: 100vh;
   align-items: center;
-  background-color: white;
+  background-image: linear-gradient(yellow, #ff6833 80%);
   width: 100vw;
+  position: relative;
 `;
 
 export const SecondContainer = styled.div`
@@ -26,34 +27,47 @@ export const Text = styled.h2`
 
 export const CardContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  background-color: white;
   width: 100vw;
 `;
 
-export const Card = styled.div`
-  background: url(${(props) => props.characterImage}) no-repeat center;
-  background-size: 130px;
+export const Image = styled.img`
   height: 230px;
-  width: 100px;
-  border-radius: 15px;
-  border: 2px solid black;
+  margin-left: 8px;
+  width: 130px;
   :hover {
-    border: 5px solid red;
+    border: 3px solid red;
   }
 `;
+export const ArrowRight = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  color: black;
+  font-size: 45px;
+  bottom: 25%;
+  right: 5%;
+`;
+export const ArrowLeft = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  color: black;
+  font-size: 45px;
+  bottom: 25%;
+  left: 5%;
+`;
 
-export const Button = styled.button`
-  border: none;
-  color: white;
-  font-weight: 600;
-  margin: 0 auto;
-  margin-top: 45px;
+export const BioText = styled.div`
+  color: black;
   font-size: 15px;
-  background-color: ${(props) => (props.register ? "gray" : "#054092")};
-  border-radius: 15px;
-  margin-bottom: 15px;
-  width: 230px;
-  height: 40px;
+  font-weight: 700;
+  width: 160px;
+  height: 100px;
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
 `;

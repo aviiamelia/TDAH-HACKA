@@ -22,12 +22,27 @@ export const UserContainer = styled.div`
 `;
 
 export const CardSubject = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 8px;
   height: 70px;
+  color: black;
   width: 300px;
   margin-bottom: 20px;
+`;
+export const ImageSubject = styled.img`
+  width: 50px;
+  height: 50px;
+  margin: 0 30px 0 30px;
+`;
+
+export const Subject = styled.p`
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
 `;
 
 export const Picture = styled.figure`
