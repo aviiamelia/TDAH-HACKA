@@ -42,7 +42,9 @@ function Login() {
           <Button red type="submit">
             Entrar
           </Button>
-          <Button register>Cadastro</Button>
+          <Button marginBottom="8px" register>
+            Cadastro
+          </Button>
         </ButtonContainer>
       </FormContainer>
     </LoginContainer>
