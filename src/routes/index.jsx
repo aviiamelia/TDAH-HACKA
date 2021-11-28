@@ -4,6 +4,7 @@ import Login from "../components/Login";
 import CharacterSelect from "../components/CharacterSelect";
 import SubjectSelector from "../components/SubjectSelect/index";
 import MathContainer from "../components/MathPage/index";
+import PortuContainer from "../components/PortuPage/index";
 
 const Routes = () => {
   return (
@@ -23,6 +24,10 @@ const Routes = () => {
       <Route path="/math">
         <MathContainer />
       </Route>
+      <Route path="/portu">
+        <PortuContainer />
+      </Route>
+      
     </Switch>
   );
 };

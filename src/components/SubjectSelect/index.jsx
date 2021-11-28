@@ -32,8 +32,8 @@ function SubjectSelector() {
         <UserName>{user}</UserName>
       </UserContainer>
       <SubjectsContainer>
-        {images.map((card) => (
-          <CardSubject onClick={() => history.push(`/${card.path}`)}>
+        {images.map((card, index ) => (
+          <CardSubject key={index} onClick={() => history.push(`/${card.path}`)}>
             <ImageSubject src={card.image} />
             <Subject>{card.subject}</Subject>
           </CardSubject>
