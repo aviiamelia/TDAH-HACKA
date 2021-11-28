@@ -57,7 +57,9 @@ function PortuContainer() {
           <UserName>{user}</UserName>
         </UserContainer>
         <ProblemContainer>
-          <h3>Organize as sílabas e escreva as palavras</h3>
+          <h4 style={{ textAlign: "center" }}>
+            Organize as sílabas e escreva as palavras
+          </h4>
         </ProblemContainer>
         <SquareContainer>
           {silabas.map((card) => (
