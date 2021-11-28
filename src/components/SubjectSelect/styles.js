@@ -19,7 +19,7 @@ export const UserContainer = styled.div`
   display: flex;
   flex-direction: row;
   min-height: 50px;
-  margin-top: 25px;
+  margin-top: 5px;
   width: 100%;
   color: black;
   border-radius: 8px;

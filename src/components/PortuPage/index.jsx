@@ -57,7 +57,13 @@ function PortuContainer() {
           <UserName>{user}</UserName>
         </UserContainer>
         <ProblemContainer>
-          <h4 style={{ textAlign: "center" }}>
+          <h4
+            style={{
+              textAlign: "center",
+              marginBottom: "15px",
+              marginTop: "5px",
+            }}
+          >
             Organize as sílabas e escreva as palavras
           </h4>
         </ProblemContainer>
