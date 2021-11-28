@@ -20,6 +20,7 @@ import {
 import { useCharacters } from "../../Providers/Characters";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
+import { IoMdArrowBack } from "react-icons/io";
 function PortuContainer() {
   const { user, avatar } = useCharacters();
   const history = useHistory();
@@ -35,6 +36,9 @@ function PortuContainer() {
   }, [user, history]);
   return (
     <Container>
+      <span onClick={() => history.push("/subjects")}>
+        <IoMdArrowBack />
+      </span>
       <UserContainer>
         <Picture characterImage={avatar} />
         <UserName>{user}</UserName>
@@ -56,9 +60,7 @@ function PortuContainer() {
         ))}
       </SquareContainer>
       <Image src={pomodoro} />
-      <Button onClick={() => history.push("/subjects")} margin="25px">
-        Pronto
-      </Button>
+      <Button margin="25px">Pronto</Button>
     </Container>
   );
 }

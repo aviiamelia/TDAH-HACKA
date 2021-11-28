@@ -15,6 +15,7 @@ import { Button } from "../Login/styles";
 import { useCharacters } from "../../Providers/Characters";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
+import { IoMdArrowBack } from "react-icons/io";
 function MathContainer() {
   const history = useHistory();
   const { user, avatar } = useCharacters();
@@ -25,12 +26,18 @@ function MathContainer() {
   }, [user, history]);
   return (
     <Container>
+      <span
+        style={{ color: "black", fontSize: "25px" }}
+        onClick={() => history.push("/subjects")}
+      >
+        <IoMdArrowBack />
+      </span>
       <UserContainer>
         <Picture characterImage={avatar} />
         <UserName>{user}</UserName>
       </UserContainer>
       <ProblemContainer>
-        <h3>Com sete algarismo quatro, chege ao resultado indicado</h3>
+        <h3>Com sete algarismo quatro, chegue ao resultado indicado</h3>
       </ProblemContainer>
       <SquareContainer>
         {[1, 2, 3, 4, 5, 6, 7].map((number) => (
@@ -47,9 +54,7 @@ function MathContainer() {
         = <Squares>100</Squares>
       </SquareContainer>
       <ImagePomo src={pomodoro} />
-      <Button onClick={() => history.push("/subjects")} margin="50px">
-        pronto
-      </Button>
+      <Button margin="50px">pronto</Button>
     </Container>
   );
 }

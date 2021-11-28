@@ -4,6 +4,8 @@ export const WhiteContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: black;
+  font-size: 25px;
   background-color: white;
 `;
 export const SubjectsContainer = styled.div`
@@ -17,6 +19,7 @@ export const UserContainer = styled.div`
   display: flex;
   flex-direction: row;
   min-height: 50px;
+  margin-top: 25px;
   width: 100%;
   color: black;
   border-radius: 8px;
