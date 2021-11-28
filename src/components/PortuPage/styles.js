@@ -35,7 +35,7 @@ export const SquareContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  max-width: 300px
+  max-width: 300px;
   color: black;
   font-size: 25px;
 `;
@@ -48,10 +48,14 @@ export const Squares = styled.div`
   margin-right: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
 `;
 
 export const Lines = styled.div`
   border: 1px solid black;
+  
   
   width: 200px;
   

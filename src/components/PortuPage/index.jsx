@@ -17,9 +17,9 @@ import { useCharacters } from "../../Providers/Characters";
 function PortuContainer() {
   const { user, avatar } = useCharacters();
   const silabas = [
-    ["RU", "CO", "JA"],
-    ["RI", "LA", "GO"],
-    ["CA", "TU", "NO"]
+    {pri:"RU", seg:"CO", ter:"JA"},
+    {pri:"RI", seg:"LA", ter:"GO"},
+    {pri:"CA", seg:"TU", ter:"NO"}
   ];
   return (
     <Container>
@@ -32,11 +32,13 @@ function PortuContainer() {
       </ProblemContainer>
       <SquareContainer>
       <div>
-        {[1, 2, 3].map((number, silabas) => (
+        {silabas.map((card) => (
           <>
-            <Squares>{}</Squares>
-            <Squares>{}</Squares>
-            <Squares>{}</Squares>
+            <div>
+              <Squares>{card.pri}</Squares>
+              <Squares>{card.seg}</Squares>
+              <Squares>{card.ter}</Squares>
+            </div>
             <Image2 src={lapis}/>
             <Lines/> 
           </>
