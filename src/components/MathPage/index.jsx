@@ -30,7 +30,7 @@ function MathContainer() {
         <UserName>{user}</UserName>
       </UserContainer>
       <ProblemContainer>
-        <h3>Com sete algarismo quatro, chege ao resultado indicado</h3>
+        <h3>Com sete algarismo quatro, chegue ao resultado indicado</h3>
       </ProblemContainer>
       <SquareContainer>
         {[1, 2, 3, 4, 5, 6, 7].map((number) => (
