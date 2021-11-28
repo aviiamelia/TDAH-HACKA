@@ -76,3 +76,10 @@ export const Lines = styled.div`
 
   margin-bottom: 15px;
 `;
+
+export const Span = styled.span`
+  position: absolute;
+  font-size: 25px;
+  top: 1%;
+  right: 1%;
+`;

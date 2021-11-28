@@ -6,6 +6,7 @@ import { ToContainer, Cards, AddTodo, TodoModal } from "./styles";
 import { FiPlus } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { useState, useEffect } from "react";
+import { IoMdArrowBack } from "react-icons/io";
 
 function TodoContainer() {
   const history = useHistory();
@@ -31,6 +32,9 @@ function TodoContainer() {
 
   return (
     <Container>
+      <span onClick={() => history.push("/subjects")}>
+        <IoMdArrowBack />
+      </span>
       <UserContainer>
         <Picture characterImage={avatar} />
         <UserName>{user}</UserName>

@@ -10,6 +10,7 @@ import {
   Lines,
   Cont,
   Cont2,
+  Span,
 } from "./styles";
 import { Button } from "../Login/styles";
 import {
@@ -21,6 +22,9 @@ import { useCharacters } from "../../Providers/Characters";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
 import { IoMdArrowBack } from "react-icons/io";
+import { useState } from "react";
+import PomoModal from "../PomoModal";
+import { AiOutlineClose } from "react-icons/ai";
 function PortuContainer() {
   const { user, avatar } = useCharacters();
   const history = useHistory();
@@ -29,39 +33,49 @@ function PortuContainer() {
     { pri: "RI", seg: "LA", ter: "GO" },
     { pri: "CA", seg: "TU", ter: "NO" },
   ];
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     if (user === null) {
       history.push("/");
     }
   }, [user, history]);
   return (
-    <Container>
-      <span onClick={() => history.push("/subjects")}>
-        <IoMdArrowBack />
-      </span>
-      <UserContainer>
-        <Picture characterImage={avatar} />
-        <UserName>{user}</UserName>
-      </UserContainer>
-      <ProblemContainer>
-        <h3>Organize as sílabas e escreva as palavras</h3>
-      </ProblemContainer>
-      <SquareContainer>
-        {silabas.map((card) => (
-          <Cont>
-            <Cont2>
-              <Squares>{card.pri}</Squares>
-              <Squares>{card.seg}</Squares>
-              <Squares>{card.ter}</Squares>
-            </Cont2>
-            <Image2 src={lapis} />
-            <Lines />
-          </Cont>
-        ))}
-      </SquareContainer>
-      <Image src={pomodoro} />
-      <Button margin="25px">Pronto</Button>
-    </Container>
+    <>
+      {isOpen && (
+        <PomoModal>
+          <Span onClick={() => setIsOpen(!isOpen)}>
+            <AiOutlineClose />
+          </Span>
+        </PomoModal>
+      )}
+      <Container>
+        <span onClick={() => history.push("/subjects")}>
+          <IoMdArrowBack />
+        </span>
+        <UserContainer>
+          <Picture characterImage={avatar} />
+          <UserName>{user}</UserName>
+        </UserContainer>
+        <ProblemContainer>
+          <h3>Organize as sílabas e escreva as palavras</h3>
+        </ProblemContainer>
+        <SquareContainer>
+          {silabas.map((card) => (
+            <Cont>
+              <Cont2>
+                <Squares>{card.pri}</Squares>
+                <Squares>{card.seg}</Squares>
+                <Squares>{card.ter}</Squares>
+              </Cont2>
+              <Image2 src={lapis} />
+              <Lines />
+            </Cont>
+          ))}
+        </SquareContainer>
+        <Image onClick={() => setIsOpen(!isOpen)} src={pomodoro} />
+        <Button margin="25px">Pronto</Button>
+      </Container>
+    </>
   );
 }
 
