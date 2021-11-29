@@ -6,6 +6,13 @@
 
 ### Tema: Como a tecnologia pode melhorar a vida de grupos diversos? ###
 
+#### O app Alliance tem como publico alvo pessoas que tem TDAH, onde podemos identificar
+#### que em sua maioria não utilizam nenhum tipo de tecnologia para auxiliar nesse ponto.
+#### A monetização seria feita através da conexão entre paciente e profissional da área da
+#### saúde e pela integração entre escola e paciente. As funcionalidade implementadas foram
+#### estudos, raciocínio logico e To do (lista de tarefas). Com a possibilidade de pelo menos
+#### mais 5 releases que ampliariam muito o potencial da ferramenta.
+
 
 
 ## Repository created as part of the Hackathon promoted by PROVI ##
