@@ -13,9 +13,9 @@
 #### estudos, raciocínio logico e To do (lista de tarefas). Com a possibilidade de pelo menos
 #### mais 5 releases que ampliariam muito o potencial da ferramenta.
 
-<center>
+:------:
 ![provi_hack_login](./provi_hack_login.png)
-</center>
+
 
 ## [Link do Site](https://tdah-hacka.vercel.app/)
 
