@@ -12,7 +12,7 @@
 
 ### Topic: How can technology improve the lives of diverse groups? ###
 
-#Links de contribuintes para contato:#
+##Links de contribuintes para contato:##
 
 <img src="https://user-images.githubusercontent.com/73404432/143801291-95d764c4-2472-4c89-90c8-84270e34452e.png" alt="alt text" width="50" height="50">
 
